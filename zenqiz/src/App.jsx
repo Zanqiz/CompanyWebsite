@@ -1,4 +1,4 @@
-
+import { Routes, Route } from "react-router-dom";
 import "./styles.css";
 
 import Navbar from "./components/Navbar";
@@ -9,8 +9,9 @@ import Services from "./components/Services";
 import AboutCompany from "./components/AboutCompany";
 import Industries from "./components/Industries";
 import Footer from "./components/Footer";
+import Contact from "./components/Contact"; // ✅ fix casing
 
-export default function App() {
+function Home() {
   return (
     <div className="zq-root">
       <Navbar />
@@ -22,5 +23,14 @@ export default function App() {
       <Industries />
       <Footer />
     </div>
+  );
+}
+
+export default function App() {
+  return (
+    <Routes>
+      <Route path="/" element={<Home />} />
+      <Route path="/contact" element={<Contact />} />
+    </Routes>
   );
 }

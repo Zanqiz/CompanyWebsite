@@ -1,20 +1,26 @@
-import React from "react";
+import { Link } from "react-router-dom";
+ 
 import { ArrowRight, Globe, AtSign, Rss } from "lucide-react";
 import Logo from "./Logo";
 
 export default function Footer() {
   return (
     <footer className="zq-footer" id="contact">
-      <div className="zq-cta">
-        <h2>Ready to see how we&rsquo;d run your project?</h2>
-        <p>One conversation, no obligation — we&rsquo;ll map scope before you commit to anything.</p>
-        <div className="zq-cta-actions">
-          <button className="zq-btn zq-btn-orange">
-            Start a project <ArrowRight size={18} />
-          </button>
-          <button className="zq-btn zq-btn-outline-light">Book a free call</button>
-        </div>
-      </div>
+    <div className="zq-cta">
+  <h2>Ready to see how we&rsquo;d run your project?</h2>
+  <p>
+    One conversation, no obligation — we&rsquo;ll map scope before you commit to
+    anything.
+  </p>
+  <div className="zq-cta-actions">
+   <Link to="/contact" className="zq-btn zq-btn-orange">
+  Start a project <ArrowRight size={18} />
+</Link>
+<Link to="/contact" className="zq-btn zq-btn-outline-light">
+  Book a free call
+</Link>
+  </div>
+</div>
 
       <div className="zq-footer-bottom">
         <div className="zq-footer-grid">

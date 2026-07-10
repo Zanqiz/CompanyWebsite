@@ -1,8 +1,15 @@
 import React, { useState, useEffect } from "react";
 import { Menu, X } from "lucide-react";
+import { Link } from "react-router-dom";   // ✅ import Link
 import Logo from "./Logo";
 
-const LINKS = ["Home", "Services", "Industries", "About", "Contact"];
+const LINKS = [
+  { label: "Home", path: "/" },
+  { label: "Services", path: "/#services" },
+  { label: "Industries", path: "/#industries" },
+  { label: "About", path: "/#about" },
+  { label: "Contact", path: "/contact" }   // ✅ unified route
+];
 
 export default function Navbar() {
   const [open, setOpen] = useState(false);
@@ -20,24 +27,36 @@ export default function Navbar() {
         <Logo />
         <nav className="zq-nav-links">
           {LINKS.map((l) => (
-            <a key={l} href={`#${l.toLowerCase()}`}>
-              {l}
-            </a>
+            <Link key={l.label} to={l.path}>
+              {l.label}
+            </Link>
           ))}
         </nav>
-        <button className="zq-btn zq-btn-orange zq-nav-cta">Start a project</button>
-        <button className="zq-nav-burger" onClick={() => setOpen((o) => !o)} aria-label="Menu">
+        <Link to="/contact" className="zq-btn zq-btn-orange zq-nav-cta">
+          Start a project
+        </Link>
+        <button
+          className="zq-nav-burger"
+          onClick={() => setOpen((o) => !o)}
+          aria-label="Menu"
+        >
           {open ? <X size={22} /> : <Menu size={22} />}
         </button>
       </div>
       {open && (
         <div className="zq-nav-mobile">
           {LINKS.map((l) => (
-            <a key={l} href={`#${l.toLowerCase()}`} onClick={() => setOpen(false)}>
-              {l}
-            </a>
+            <Link
+              key={l.label}
+              to={l.path}
+              onClick={() => setOpen(false)}
+            >
+              {l.label}
+            </Link>
           ))}
-          <button className="zq-btn zq-btn-orange">Start a project</button>
+          <Link to="/contactfull" className="zq-btn zq-btn-orange">
+            Start a project
+          </Link>
         </div>
       )}
     </header>
