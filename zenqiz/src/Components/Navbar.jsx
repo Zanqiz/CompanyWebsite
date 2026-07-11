@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import { Menu, X } from "lucide-react";
 import { Link } from "react-router-dom";   // ✅ import Link
 import Logo from "./Logo";
+import "./Stylesheet/Navbar.css";
 
 const LINKS = [
   { label: "Home", path: "/" },

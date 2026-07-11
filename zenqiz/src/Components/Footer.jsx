@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
- 
+import "./Stylesheet/Footer.css";
 import { ArrowRight, Globe, AtSign, Rss } from "lucide-react";
 import Logo from "./Logo";
 

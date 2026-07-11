@@ -10,9 +10,6 @@ import {
   ExternalLink,
 } from "lucide-react";
 import "../components/Contact.css";
-import Navbar from "./Navbar";
-import Footer from "./Footer";
-import "../styles.css";
 
 export default function Contact() {
   const [formData, setFormData] = useState({
@@ -49,10 +46,8 @@ export default function Contact() {
   };
 
   return (
-   <> 
-   <Navbar/>
     <main className="contact-page">
-        
+
       {/* ================= HERO ================= */}
 
       <section className="contact-hero">
@@ -291,7 +286,5 @@ export default function Contact() {
       </section>
 
     </main>
-    <Footer/>
-    </>
   );
 }
