@@ -1,8 +1,8 @@
 import { Routes, Route } from "react-router-dom";
 
-import Layout from "./components/Layout";
-import Hero from "./components/Hero";
-import BrandStory from "./components/BrandStory";
+import Layout from "../src/Components/Layout";
+import Hero from "../src/Components/Hero";
+import BrandStory from "../src/Components/BrandStory";
 import ProcessSteps from "./components/ProcessSteps";
 import Services from "./components/Services";
 import AboutCompany from "./components/AboutCompany";
