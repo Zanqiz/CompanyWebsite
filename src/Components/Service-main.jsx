@@ -1,8 +1,8 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
-import "../Components/Stylesheet/Service-main.css";
+import "./Stylesheet/Service-main.css";
 import "../styles.css";
-import CTA from "../components/CTA";
+import CTA from "./CTA";
 import { ArrowRight } from "lucide-react";
 import { services, filters } from "../data/servicesData";
 
@@ -16,7 +16,6 @@ export default function ServicesSection() {
 
   return (
     <section className="services-section">
-
       <div className="heading">
         <h1>
           Expertise that scales with your
@@ -62,7 +61,6 @@ export default function ServicesSection() {
       </div>
 
       <CTA />
-
     </section>
   );
 }
