@@ -211,7 +211,7 @@ export default function ContactForm() {
             and project discussions.
           </p>
 
-          <h4>hello@zeniqiz.com</h4>
+          <h4>hello@zanqix.com</h4>
 
           <span>+91 98765 43210</span>
 

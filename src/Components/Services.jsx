@@ -1,70 +1,26 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import {
-  Code2,
-  Globe,
-  PenTool,
-  ShoppingCart,
-  FileText,
-  BookOpen,
-  Braces,
-  Keyboard,
-  ArrowRight,
-} from "lucide-react";
+import { ArrowRight } from "lucide-react";
+import { services } from "../data/servicesData";
 
-const FEATURED_SERVICES = [
-  {
-    key: "custom-software",
-    Icon: Code2,
-    title: "Custom Software Development",
-    body: "Purpose-built software designed around your business workflows.",
-  },
-  {
-    key: "web-app",
-    Icon: Globe,
-    title: "Web Application Development",
-    body: "Fast, scalable web applications built with modern technologies.",
-  },
-  {
-    key: "ui-ux",
-    Icon: PenTool,
-    title: "UI / UX Design",
-    body: "Beautiful interfaces that deliver intuitive user experiences.",
-  },
-  {
-    key: "ecommerce",
-    Icon: ShoppingCart,
-    title: "E-Commerce Solutions",
-    body: "Online stores optimized for performance, sales, and growth.",
-  },
-  {
-    key: "pdf-remediation",
-    Icon: FileText,
-    title: "PDF Accessibility",
-    body: "Accessible PDF documents compliant with WCAG and PDF/UA standards.",
-  },
-  {
-    key: "epub",
-    Icon: BookOpen,
-    title: "EPUB Production",
-    body: "Professional EPUB 2 & EPUB 3 conversion for digital publishing.",
-  },
-  {
-    key: "xml",
-    Icon: Braces,
-    title: "XML Conversion",
-    body: "Accurate XML tagging and structured content conversion services.",
-  },
-  {
-    key: "data-entry",
-    Icon: Keyboard,
-    title: "Data Processing",
-    body: "Reliable data entry and processing with quality assurance.",
-  },
+// One or two representative services per category for the homepage preview
+const FEATURED_SLUGS = [
+  "web-application-development",
+  "ui-ux-design",
+  "ecommerce-solutions",
+  "website-design-development",
+  "pdf-accessibility-remediation",
+  "wcag-pdfua-section508-compliance",
+  "data-entry-processing",
+  "document-conversion",
 ];
 
+const FEATURED_SERVICES = FEATURED_SLUGS.map((slug) =>
+  services.find((s) => s.slug === slug)
+).filter(Boolean);
+
 function ServiceCard({ service }) {
-  const Icon = service.Icon;
+  const Icon = service.icon;
 
   return (
     <article className="zq-service-card">
@@ -74,9 +30,9 @@ function ServiceCard({ service }) {
 
       <h3>{service.title}</h3>
 
-      <p>{service.body}</p>
+      <p>{service.description}</p>
 
-      <Link to="/services" className="zq-service-link">
+      <Link to={`/services/${service.slug}`} className="zq-service-link">
         Learn More
         <ArrowRight size={16} />
       </Link>
@@ -104,7 +60,7 @@ export default function Service() {
 
         <div className="zq-services-grid">
           {FEATURED_SERVICES.map((service) => (
-            <ServiceCard key={service.key} service={service} />
+            <ServiceCard key={service.slug} service={service} />
           ))}
         </div>
 
@@ -118,4 +74,3 @@ export default function Service() {
     </section>
   );
 }
-

@@ -5,9 +5,9 @@
    ========================================================================== */
 
 /* ---------- Logo ---------- */
-.zq-logo { display: flex; align-items: center; gap: 5px; }
+.zq-logo { display: flex; align-items: center; gap: 2px; }
 .zq-logo-mark {
-  width: 34px; height: 34px; border-radius: 9px;
+  width: 40px; height: 40px; border-radius: 9px;
   background: linear-gradient(135deg, var(--purple), var(--navy));
   display: flex; align-items: center; justify-content: center;
   position: relative;
@@ -17,7 +17,7 @@
   background: #fff; opacity: 0.9;
 }
 .zq-logo-img {
-  height: 45px;
+  height: 64px;
   width: auto;
   display: block;
 }

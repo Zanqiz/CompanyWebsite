@@ -217,15 +217,28 @@
 
 .value-icon {
   position: relative;
-  width: 52px;
-  height: 52px;
+  width: 84px;
+  height: 84px;
   display: flex;
   align-items: center;
   justify-content: center;
-  border-radius: 12px;
+  border-radius: 14px;
   background: var(--about-navy);
-  color: var(--about-orange);
   margin-bottom: 22px;
+  overflow: hidden;
+}
+
+.value-icon img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 14px;
+  transition: transform 0.4s ease, opacity 0.4s ease;
+}
+
+.value-card:hover .value-icon img {
+  transform: scale(1.08);
+  opacity: 0.9;
 }
 
 .value-card h3 {
@@ -243,6 +256,50 @@
   color: var(--about-text-muted);
   margin: 0;
   max-width: 320px;
+}
+
+/* ---------- Quote Section ---------- */
+
+.about-quote {
+  padding: 80px 24px;
+  background: #fff;
+  border-top: 1px solid var(--about-border);
+  border-bottom: 1px solid var(--about-border);
+}
+
+.about-quote-inner {
+  max-width: 760px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.about-quote blockquote {
+  margin: 0;
+  font-family: "Space Grotesk", sans-serif;
+  font-size: clamp(1.4rem, 2.6vw, 2rem);
+  font-weight: 600;
+  line-height: 1.4;
+  color: var(--about-navy);
+  position: relative;
+}
+
+.about-quote blockquote::before {
+  content: "";
+  display: block;
+  width: 40px;
+  height: 3px;
+  background: var(--about-orange);
+  margin: 0 auto 28px;
+}
+
+.about-quote cite {
+  display: block;
+  margin-top: 20px;
+  font-family: "Inter", sans-serif;
+  font-style: normal;
+  font-size: 0.95rem;
+  font-weight: 500;
+  color: var(--about-text-muted);
 }
 
 /* ---------- Mission Section ---------- */
@@ -329,11 +386,20 @@
     padding: 80px 16px;
   }
 
+  .about-quote {
+    padding: 56px 16px;
+  }
+
   .value-card {
     padding: 32px 24px;
   }
 
   .about-story-media img {
     height: 280px;
+  }
+
+  .value-icon {
+    width: 68px;
+    height: 68px;
   }
 }
