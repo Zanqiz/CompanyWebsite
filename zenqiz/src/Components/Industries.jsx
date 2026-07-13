@@ -1,14 +1,17 @@
 import React from "react";
 
 const INDUSTRIES = [
-  "Publishers",
-  "Government",
-  "Real Estate",
+  
   "Healthcare",
   "Education",
   "Finance",
-  "Retail",
+  "E-Commerce",
+  "Enterprises",
+  "Publishers",
+  "Government",
+  "Real Estate",
   "Logistics",
+  "Startups"
 ];
 
 export default function Industries() {

@@ -9,7 +9,7 @@ import {
 } from "lucide-react";
 
 const STEPS = [
-  { Icon: ClipboardList, title: "Discover", body: "We map your goals, constraints, and existing systems." },
+  { Icon: ClipboardList, title: "Consult", body: "We map your goals, constraints, and existing systems." },
   { Icon: Headphones, title: "Plan", body: "Scope, timeline, and team are locked before code starts." },
   { Icon: PenTool, title: "Design", body: "UX flows and content structure get shaped and reviewed." },
   { Icon: Code2, title: "Develop", body: "Engineers and content teams build in parallel sprints." },

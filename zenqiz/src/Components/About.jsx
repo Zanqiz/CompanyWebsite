@@ -1,4 +1,3 @@
-import { Users, Target, Award, Zap } from "lucide-react";
 import "./Stylesheet/About.css";
 
 export default function About() {
@@ -6,7 +5,7 @@ export default function About() {
     <section className="about-page">
       <div className="about-hero">
         <div className="about-hero-inner">
-          <h1>About Zanqix</h1>
+          <h1>ABOUT ZANQIX</h1>
           <p>
             We're a team of engineers, designers, and QA specialists who build
             software you can trust — on time, on budget, and without surprises.
@@ -41,10 +40,11 @@ export default function About() {
       <div className="about-values">
         <div className="about-values-inner">
           <h2>Our Values</h2>
+
           <div className="values-grid">
             <div className="value-card">
               <div className="value-icon">
-                <Users size={32} />
+                <img src="/images/about/people-first.jpg" alt="" />
               </div>
               <h3>People First</h3>
               <p>
@@ -52,9 +52,10 @@ export default function About() {
                 Your success is our success.
               </p>
             </div>
+
             <div className="value-card">
               <div className="value-icon">
-                <Target size={32} />
+                <img src="/images/about/clear-communication.jpg" alt="" />
               </div>
               <h3>Clear Communication</h3>
               <p>
@@ -62,9 +63,10 @@ export default function About() {
                 and keep you informed at every step.
               </p>
             </div>
+
             <div className="value-card">
               <div className="value-icon">
-                <Award size={32} />
+                <img src="/images/about/quality-over-speed.jpg" alt="" />
               </div>
               <h3>Quality Over Speed</h3>
               <p>
@@ -72,9 +74,10 @@ export default function About() {
                 is tested before it reaches production.
               </p>
             </div>
+
             <div className="value-card">
               <div className="value-icon">
-                <Zap size={32} />
+                <img src="/images/about/continuous-improvement.jpg" alt="" />
               </div>
               <h3>Continuous Improvement</h3>
               <p>
@@ -83,6 +86,15 @@ export default function About() {
               </p>
             </div>
           </div>
+        </div>
+      </div>
+
+      <div className="about-quote">
+        <div className="about-quote-inner">
+          <blockquote>
+            "First, solve the problem. Then, write the code."
+            — John Johnson
+          </blockquote>
         </div>
       </div>
 

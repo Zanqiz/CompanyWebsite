@@ -210,7 +210,7 @@ h1, h2, h3, h4, h5 {
 }
 .zq-about-media img {
   width: 100%; height: 420px; object-fit: cover; border-radius: 20px;
-  display: block;
+  display: block;   margin-left: -60px;
 }
 .zq-about-copy h2 {
   font-size: clamp(26px, 3.2vw, 36px); line-height: 1.2; margin-top: 6px;
