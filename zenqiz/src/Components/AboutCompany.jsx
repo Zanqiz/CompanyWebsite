@@ -6,15 +6,15 @@ export default function AboutCompany() {
         <div className="zq-about-media">
           <img
             src="/aboutme.jpg"
-            alt="About Zenqiz"
+            alt="About Zanqix"
           />
         </div>
 
         <div className="zq-about-copy">
-          <span className="zq-eyebrow">About Zenqiz</span>
+          <span className="zq-eyebrow">About Zanqix</span>
           <h2>A team built around one job: making software you can trust.</h2>
           <p>
-            Zenqiz Technologies started with a simple frustration — most
+            Zanqix Technologies started with a simple frustration — most
             software projects ship late, over budget, and full of
             surprises. We build differently. Every engagement follows the
             same seven-step process, every deliverable is tested before it

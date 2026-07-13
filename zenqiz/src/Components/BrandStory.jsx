@@ -1,4 +1,3 @@
-import React from "react";
 import { Eye, UserCog, Users } from "lucide-react";
 
 function ValueCard({ Icon, title, body }) {
@@ -38,7 +37,7 @@ export default function BrandStory() {
       </div>
 
       <p className="zq-story-body">
-        At Zenqiz Technologies, we don&rsquo;t just build software; we
+        At Zanqix Technologies, we don&rsquo;t just build software; we
         engineer peace of mind. Our approach is rooted in the belief that
         technology should serve humanity, not the other way around. By
         integrating AI-powered automation with human-centric design, we

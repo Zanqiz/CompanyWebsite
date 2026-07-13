@@ -1,0 +1,301 @@
+/* Service-main.css */
+
+.services-section {
+  --sm-purple: #5B3A8E;
+  --sm-purple-light: #8B6FC4;
+  --sm-navy: #1B1F3B;
+  --sm-orange: #F2994A;
+  --sm-bg: #FAF9FC;
+  --sm-card-bg: #FFFFFF;
+  --sm-text: #1B1F3B;
+  --sm-text-muted: #6B6B80;
+  --sm-border: #E7E4EF;
+
+  position: relative;
+  background:
+    radial-gradient(ellipse 500px 400px at 15% 10%, rgba(91, 58, 142, 0.14), transparent 70%),
+    radial-gradient(ellipse 450px 380px at 85% 15%, rgba(242, 153, 74, 0.12), transparent 70%),
+    radial-gradient(ellipse 600px 500px at 50% 100%, rgba(91, 58, 142, 0.08), transparent 70%),
+    var(--sm-bg);
+  background-size: 140% 140%, 140% 140%, 140% 140%, 100% 100%;
+  animation: sm-drift 22s ease-in-out infinite;
+  padding: 120px 24px 100px;
+  font-family: "Inter", sans-serif;
+  color: var(--sm-text);
+  overflow: hidden;
+}
+
+.services-section::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image:
+    linear-gradient(rgba(27, 31, 59, 0.035) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(27, 31, 59, 0.035) 1px, transparent 1px);
+  background-size: 56px 56px;
+  mask-image: radial-gradient(ellipse 70% 60% at 50% 0%, black, transparent);
+  pointer-events: none;
+  z-index: 0;
+}
+
+@keyframes sm-drift {
+  0%, 100% {
+    background-position: 0% 0%, 100% 0%, 50% 100%, 0% 0%;
+  }
+  50% {
+    background-position: 8% 12%, 92% 10%, 55% 92%, 0% 0%;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .services-section {
+    animation: none;
+  }
+}
+
+/* ---------- Heading ---------- */
+
+.services-section .heading {
+  position: relative;
+  z-index: 1;
+  max-width: 720px;
+  margin: 0 auto 64px;
+  text-align: center;
+}
+
+.services-section .heading::before {
+  content: "WHAT WE DO";
+  display: block;
+  font-size: 0.8rem;
+  font-weight: 600;
+  letter-spacing: 0.18em;
+  color: var(--sm-purple);
+  margin-bottom: 16px;
+}
+
+.services-section .heading h1 {
+  font-family: "Space Grotesk", sans-serif;
+  font-weight: 600;
+  font-size: clamp(2.25rem, 4vw, 3.25rem);
+  line-height: 1.15;
+  letter-spacing: -0.01em;
+  color: var(--sm-navy);
+  margin: 0 0 20px;
+}
+
+.services-section .heading p {
+  font-size: 1.05rem;
+  line-height: 1.6;
+  color: var(--sm-text-muted);
+  margin: 0;
+}
+
+/* ---------- Filter buttons ---------- */
+
+.services-section .filter-buttons {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+  margin: 0 auto 56px;
+  max-width: 800px;
+}
+
+.services-section .filter-buttons button {
+  font-family: "Inter", sans-serif;
+  font-size: 0.9rem;
+  font-weight: 500;
+  padding: 10px 20px;
+  border-radius: 999px;
+  border: 1px solid var(--sm-border);
+  background: var(--sm-card-bg);
+  color: var(--sm-text-muted);
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.services-section .filter-buttons button:hover {
+  border-color: var(--sm-purple-light);
+  color: var(--sm-purple);
+}
+
+.services-section .filter-buttons button.active {
+  background: var(--sm-navy);
+  border-color: var(--sm-navy);
+  color: #fff;
+}
+
+/* ---------- Grid + cards ---------- */
+
+.services-section .services-grid {
+  position: relative;
+  z-index: 1;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1px;
+  max-width: 1200px;
+  margin: 0 auto 96px;
+  background: var(--sm-border);
+  border: 1px solid var(--sm-border);
+  border-radius: 16px;
+  overflow: hidden;
+}
+
+.services-section .card {
+  position: relative;
+  background: var(--sm-card-bg);
+  padding: 36px 32px;
+  display: flex;
+  flex-direction: column;
+  transition: background 0.25s ease;
+}
+
+.services-section .card:hover {
+  background: #fdfbf9;
+}
+
+.services-section .icon-box {
+  width: 48px;
+  height: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 12px;
+  background: var(--sm-navy);
+  color: var(--sm-orange);
+  margin-bottom: 20px;
+}
+
+.services-section .card h3 {
+  font-family: "Space Grotesk", sans-serif;
+  font-size: 1.15rem;
+  font-weight: 600;
+  color: var(--sm-navy);
+  margin: 0 0 10px;
+}
+
+.services-section .card p {
+  font-size: 0.92rem;
+  line-height: 1.55;
+  color: var(--sm-text-muted);
+  margin: 0 0 20px;
+  flex-grow: 1;
+}
+
+.services-section .card a {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--sm-purple);
+  text-decoration: none;
+  transition: gap 0.2s ease, color 0.2s ease;
+}
+
+.services-section .card a:hover {
+  gap: 10px;
+  color: var(--sm-orange);
+}
+
+/* ---------- CTA ---------- */
+
+.services-section .cta {
+  position: relative;
+  z-index: 1;
+  max-width: 1000px;
+  margin: 0 auto;
+  background: var(--sm-navy);
+  border-radius: 20px;
+  padding: 56px 48px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 32px;
+  flex-wrap: wrap;
+  overflow: hidden;
+}
+
+.services-section .cta::before {
+  content: "";
+  position: absolute;
+  bottom: -140px;
+  right: -60px;
+  width: 320px;
+  height: 320px;
+  border-radius: 50%;
+  background: radial-gradient(circle, var(--sm-purple) 0%, transparent 70%);
+  opacity: 0.6;
+}
+
+.services-section .cta > div,
+.services-section .cta > a,
+.services-section .cta > button {
+  position: relative;
+}
+
+.services-section .cta h2 {
+  font-family: "Space Grotesk", sans-serif;
+  font-size: 1.6rem;
+  font-weight: 600;
+  color: #fff;
+  margin: 0 0 10px;
+}
+
+.services-section .cta p {
+  font-size: 0.95rem;
+  color: rgba(255, 255, 255, 0.7);
+  line-height: 1.5;
+  margin: 0;
+  max-width: 480px;
+}
+
+.services-section .cta button,
+.services-section .cta .cta-btn {
+  font-family: "Inter", sans-serif;
+  font-weight: 600;
+  font-size: 0.95rem;
+  padding: 14px 28px;
+  border-radius: 999px;
+  border: none;
+  background: var(--sm-orange);
+  color: #fff;
+  cursor: pointer;
+  white-space: nowrap;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  transition: filter 0.2s ease, transform 0.2s ease;
+}
+
+.services-section .cta button:hover,
+.services-section .cta .cta-btn:hover {
+  filter: brightness(1.08);
+  transform: translateY(-1px);
+}
+
+/* ---------- Responsive ---------- */
+
+@media (max-width: 960px) {
+  .services-section .services-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 640px) {
+  .services-section {
+    padding: 80px 16px 72px;
+  }
+
+  .services-section .services-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .services-section .cta {
+    flex-direction: column;
+    text-align: center;
+    padding: 40px 28px;
+  }
+}

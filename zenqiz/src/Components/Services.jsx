@@ -84,7 +84,7 @@ function ServiceCard({ service }) {
   );
 }
 
-export default function Services() {
+export default function Service() {
   return (
     <section className="zq-services" id="services">
       <div className="zq-services-inner">
