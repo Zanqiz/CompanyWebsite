@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { services } from "../Data/servicesData";
+
 import {
   ArrowRight,
   MapPin,
@@ -9,40 +9,29 @@ import {
   Code2,
   ExternalLink,
 } from "lucide-react";
-import "../Components/Stylesheet/Contact.css";
+import "../components/Contact.css";
 
-export default function Contact() {
-  const [formData, setFormData] = useState({
-    fullName: "",
-    email: "",
-    projectType: "Web Development",
-    message: "",
-    requestNDA: false,
-  });
+export default function ContactForm() {
+  const [result, setResult] = useState("");
 
-  const handleChange = (e) => {
-    const { name, value, type, checked } = e.target;
+  const onSubmit = async (event) => {
+    event.preventDefault();
+    setResult("Sending....");
+    const formData = new FormData(event.target);
+    formData.append("access_key", "39247057-d808-411f-80c1-8aa5858a");
 
-    setFormData((prev) => ({
-      ...prev,
-      [name]: type === "checkbox" ? checked : value,
-    }));
-  };
-
-  const handleSubmit = (e) => {
-    e.preventDefault();
-
-    console.log(formData);
-
-    alert("Thank you! We will contact you shortly.");
-
-    setFormData({
-      fullName: "",
-      email: "",
-      projectType: "Web Development",
-      message: "",
-      requestNDA: false,
+    const response = await fetch("https://api.web3forms.com/submit", {
+      method: "POST",
+      body: formData
     });
+
+    const data = await response.json();
+    if (data.success) {
+      setResult("Form Submitted Successfully");
+      event.target.reset();
+    } else {
+      setResult("Error");
+    }
   };
 
   return (
@@ -84,8 +73,8 @@ export default function Contact() {
               <MapPin size={20} />
 
               <div>
-                <span>India</span>
-                <h4>Nagercoil, Tamil Nadu</h4>
+                <span>Global HQ</span>
+                <h4>Silicon Valley, CA</h4>
               </div>
             </div>
 
@@ -94,7 +83,7 @@ export default function Contact() {
 
               <div>
                 <span>Response Time</span>
-                <h4>&lt; 24/7 Support</h4>
+                <h4>&lt; 12 Hours</h4>
               </div>
             </div>
 
@@ -106,7 +95,7 @@ export default function Contact() {
 
         <div className="contact-right">
 
-          <form onSubmit={handleSubmit}>
+          <form onSubmit={onSubmit}>
 
             <div className="two-column">
 
@@ -141,18 +130,18 @@ export default function Contact() {
             <div className="input-group">
 
               <label>Project Type</label>
-<select
-  name="projectType"
-  value={formData.projectType}
-  onChange={handleChange}
->
-  <option value="">Select a service</option>
-  {services.map((service) => (
-    <option key={service.slug} value={service.title}>
-      {service.title}
-    </option>
-  ))}
-</select>
+
+              <select
+                name="projectType"
+                value={formData.projectType}
+                onChange={handleChange}
+              >
+                <option>Web Development</option>
+                <option>Software Development</option>
+                <option>UI / UX Design</option>
+                <option>E-Commerce</option>
+                <option>Accessibility</option>
+              </select>
 
             </div>
 
@@ -186,7 +175,7 @@ export default function Contact() {
 
             </div>
 
-            <button className="submit-btn">
+            <button className="submit-btn" type="submit">
 
               Send Proposal
 
@@ -222,9 +211,9 @@ export default function Contact() {
             and project discussions.
           </p>
 
-          <h4>hello@zanqix.com</h4>
+          <h4>hello@zeniqiz.com</h4>
 
-          {/* <span>+91 98765 43210</span> */}
+          <span>+91 98765 43210</span>
 
         </div>
 
@@ -242,21 +231,19 @@ export default function Contact() {
           </p>
 
           <h4>
-            Nagercoil, Tamil Nadu
+            101 Innovation Blvd,
             <br />
-            India
+            Suite 400
           </h4>
 
           <span>
-            Nagercoil, Tamil Nadu
-            <br />
-            India
+            Palo Alto, CA 94304
           </span>
-{/* 
+
           <a href="#">
             VIEW ON MAPS
             <ExternalLink size={15} />
-          </a> */}
+          </a>
 
         </div>
 
@@ -277,9 +264,9 @@ export default function Contact() {
 
             <span>Discord</span>
 
-            <span>what's app</span>
+            <span>Documentation</span>
 
-            <span>Instagram</span>
+            <span>GitHub</span>
 
           </div>
 
