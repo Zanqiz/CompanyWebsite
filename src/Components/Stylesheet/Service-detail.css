@@ -1,0 +1,256 @@
+.service-detail {
+  --sd-purple: #54b8d1;
+  --sd-purple-light: #7C5CB8;
+  --sd-navy: #1B1F3B;
+  --sd-orange: #F2994A;
+  --sd-bg: #FAF9FC;
+  --sd-text-muted: #6B6B80;
+  --sd-border: #E7E4EF;
+
+  background: var(--sd-bg);
+  padding: 64px 24px 96px;
+  font-family: "Inter", sans-serif;
+  color: var(--sd-navy);
+}
+
+.sd-inner {
+  max-width: 1080px;
+  margin: 0 auto;
+}
+
+.sd-back {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: var(--sd-text-muted);
+  text-decoration: none;
+  margin-bottom: 32px;
+  transition: color 0.2s ease;
+}
+
+.sd-back:hover {
+  color: var(--sd-purple);
+}
+
+/* Header */
+
+.sd-header {
+  max-width: 640px;
+  margin-bottom: 40px;
+}
+
+.sd-icon-box {
+  width: 56px;
+  height: 56px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 14px;
+  background: linear-gradient(135deg, #1E3A8A, #3B82F6);
+  color: #fff;
+  margin-bottom: 20px;
+}
+
+.sd-header h1 {
+  font-family: "Space Grotesk", sans-serif;
+  font-size: clamp(1.9rem, 3.5vw, 2.6rem);
+  font-weight: 600;
+  line-height: 1.15;
+  margin: 0 0 14px;
+}
+
+.sd-header p {
+  font-size: 1.02rem;
+  line-height: 1.65;
+  color: var(--sd-text-muted);
+  margin: 0;
+}
+
+/* Images */
+
+.sd-images {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+  margin-bottom: 56px;
+}
+
+.sd-images img {
+  width: 100%;
+  height: 280px;
+  object-fit: cover;
+  border-radius: 16px;
+  border: 1px solid var(--sd-border);
+  background: #eee; /* shows while replacing placeholder paths */
+}
+
+/* Body layout */
+
+.sd-body {
+  display: grid;
+  grid-template-columns: 1fr 280px;
+  gap: 56px;
+  align-items: start;
+}
+
+.sd-main h2 {
+  font-family: "Space Grotesk", sans-serif;
+  font-size: 1.3rem;
+  font-weight: 600;
+  margin: 0 0 20px;
+}
+
+.sd-main h2:not(:first-child) {
+  margin-top: 48px;
+}
+
+/* Points list */
+
+.sd-points {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.sd-points li {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  font-size: 0.96rem;
+  line-height: 1.5;
+  color: var(--sd-navy);
+}
+
+.sd-points li svg {
+  flex-shrink: 0;
+  margin-top: 3px;
+  color: var(--sd-orange);
+}
+
+/* Process steps */
+
+.sd-process {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.sd-process-step {
+  display: flex;
+  gap: 18px;
+  padding-bottom: 24px;
+  border-bottom: 1px solid var(--sd-border);
+}
+
+.sd-process-step:last-child {
+  border-bottom: none;
+  padding-bottom: 0;
+}
+
+.sd-process-num {
+  font-family: "Space Grotesk", sans-serif;
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: var(--sd-purple-light);
+  flex-shrink: 0;
+  width: 32px;
+}
+
+.sd-process-step h3 {
+  font-size: 1rem;
+  font-weight: 600;
+  margin: 0 0 6px;
+}
+
+.sd-process-step p {
+  font-size: 0.92rem;
+  line-height: 1.55;
+  color: var(--sd-text-muted);
+  margin: 0;
+}
+
+/* Sidebar */
+
+.sd-sidebar {
+  position: sticky;
+  top: 32px;
+  border: 1px solid var(--sd-border);
+  border-radius: 16px;
+  padding: 24px;
+  background: #fff;
+}
+
+.sd-sidebar h3 {
+  font-family: "Space Grotesk", sans-serif;
+  font-size: 1rem;
+  font-weight: 600;
+  margin: 0 0 14px;
+}
+
+.sd-stack {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 24px;
+}
+
+.sd-stack-tag {
+  font-size: 0.82rem;
+  font-weight: 500;
+  padding: 6px 12px;
+  border-radius: 999px;
+  background: var(--sd-bg);
+  border: 1px solid var(--sd-border);
+  color: var(--sd-navy);
+}
+
+.sd-cta-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  width: 100%;
+  padding: 12px 0;
+  border-radius: 999px;
+  background: var(--sd-orange);
+  color: #fff;
+  font-weight: 600;
+  font-size: 0.92rem;
+  text-decoration: none;
+  transition: filter 0.2s ease;
+}
+
+.sd-cta-btn:hover {
+  filter: brightness(1.08);
+}
+
+/* Responsive */
+
+@media (max-width: 860px) {
+  .sd-body {
+    grid-template-columns: 1fr;
+  }
+
+  .sd-sidebar {
+    position: static;
+  }
+}
+
+@media (max-width: 600px) {
+  .service-detail {
+    padding: 48px 16px 64px;
+  }
+
+  .sd-images {
+    grid-template-columns: 1fr;
+  }
+
+  .sd-images img {
+    height: 200px;
+  }
+}

@@ -1,0 +1,51 @@
+.zq-cta {
+  background: linear-gradient(135deg, var(--navy), var(--navy-soft));
+  border-radius: 22px;
+  padding: 45px;
+  color: #fff;
+  text-align: center;
+  margin: 96px 24px;
+  max-width: 1180px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.zq-cta h2 {
+  font-family: 'Space Grotesk', system-ui, sans-serif;
+  font-size: clamp(28px, 3.5vw, 38px);
+  font-weight: 700;
+  margin: 0 0 12px;
+  letter-spacing: -0.01em;
+}
+
+.zq-cta p {
+  color: rgba(255,255,255,0.85);
+  max-width: 700px;
+  line-height: 1.7;
+  margin: 0 auto 24px;
+  font-size: 16px;
+}
+
+.zq-cta-actions {
+  display: flex;
+  gap: 16px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+@media (max-width: 700px) {
+  .zq-cta h2 {
+    font-size: 28px;
+  }
+  
+  .zq-cta-actions {
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .zq-cta-actions .zq-btn {
+    width: 100%;
+    max-width: 280px;
+    justify-content: center;
+  }
+}

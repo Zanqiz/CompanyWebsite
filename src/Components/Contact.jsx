@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-
+import { services } from "../Data/servicesData";
 import {
   ArrowRight,
   MapPin,
@@ -9,7 +9,7 @@ import {
   Code2,
   ExternalLink,
 } from "lucide-react";
-import "../components/Contact.css";
+import "../Components/Stylesheet/Contact.css";
 
 export default function Contact() {
   const [formData, setFormData] = useState({
@@ -84,8 +84,8 @@ export default function Contact() {
               <MapPin size={20} />
 
               <div>
-                <span>Global HQ</span>
-                <h4>Silicon Valley, CA</h4>
+                <span>India</span>
+                <h4>Nagercoil, Tamil Nadu</h4>
               </div>
             </div>
 
@@ -94,7 +94,7 @@ export default function Contact() {
 
               <div>
                 <span>Response Time</span>
-                <h4>&lt; 12 Hours</h4>
+                <h4>&lt; 24/7 Support</h4>
               </div>
             </div>
 
@@ -141,18 +141,18 @@ export default function Contact() {
             <div className="input-group">
 
               <label>Project Type</label>
-
-              <select
-                name="projectType"
-                value={formData.projectType}
-                onChange={handleChange}
-              >
-                <option>Web Development</option>
-                <option>Software Development</option>
-                <option>UI / UX Design</option>
-                <option>E-Commerce</option>
-                <option>Accessibility</option>
-              </select>
+<select
+  name="projectType"
+  value={formData.projectType}
+  onChange={handleChange}
+>
+  <option value="">Select a service</option>
+  {services.map((service) => (
+    <option key={service.slug} value={service.title}>
+      {service.title}
+    </option>
+  ))}
+</select>
 
             </div>
 
@@ -222,9 +222,9 @@ export default function Contact() {
             and project discussions.
           </p>
 
-          <h4>hello@zeniqiz.com</h4>
+          <h4>hello@zanqix.com</h4>
 
-          <span>+91 98765 43210</span>
+          {/* <span>+91 98765 43210</span> */}
 
         </div>
 
@@ -242,19 +242,21 @@ export default function Contact() {
           </p>
 
           <h4>
-            101 Innovation Blvd,
+            Nagercoil, Tamil Nadu
             <br />
-            Suite 400
+            India
           </h4>
 
           <span>
-            Palo Alto, CA 94304
+            Nagercoil, Tamil Nadu
+            <br />
+            India
           </span>
-
+{/* 
           <a href="#">
             VIEW ON MAPS
             <ExternalLink size={15} />
-          </a>
+          </a> */}
 
         </div>
 
@@ -275,9 +277,9 @@ export default function Contact() {
 
             <span>Discord</span>
 
-            <span>Documentation</span>
+            <span>what's app</span>
 
-            <span>GitHub</span>
+            <span>Instagram</span>
 
           </div>
 
