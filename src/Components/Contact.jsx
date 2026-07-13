@@ -8,7 +8,7 @@ import {
   Code2,
   ExternalLink,
 } from "lucide-react";
-import "./Contact.css";
+import "../components/Stylesheet/Contact.css";
 
 export default function ContactForm() {
   const [result, setResult] = useState("");
