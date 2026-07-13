@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-
 import {
   ArrowRight,
   MapPin,
@@ -16,98 +15,85 @@ export default function ContactForm() {
 
   const onSubmit = async (event) => {
     event.preventDefault();
-    setResult("Sending....");
+
+    setResult("Sending...");
+
     const formData = new FormData(event.target);
-    formData.append("access_key", "39247057-d808-411f-80c1-8aa5858a");
+
+    formData.append(
+      "access_key",
+      "39247057-d808-411f-80c1-8aa37115858a" // <-- Replace with your real key
+    );
 
     const response = await fetch("https://api.web3forms.com/submit", {
       method: "POST",
-      body: formData
+      body: formData,
     });
 
     const data = await response.json();
+
+    console.log(data);
+
     if (data.success) {
-      setResult("Form Submitted Successfully");
+      setResult("✅ Message sent successfully!");
       event.target.reset();
     } else {
-      setResult("Error");
+      setResult(data.message);
     }
   };
 
   return (
     <main className="contact-page">
-
-      {/* ================= HERO ================= */}
-
       <section className="contact-hero">
-
         <div className="contact-left">
-
-          <span className="contact-tag">
-            CONNECT WITH US
-          </span>
+          <span className="contact-tag">CONNECT WITH US</span>
 
           <h1>
             Hi. Tell us about
             <br />
-            your project Done
+            your project
           </h1>
 
           <p>
-            We partner with forward-thinking enterprises to build
-            resilient technology ecosystems. Let's engineer your
-            future together.
+            We partner with forward-thinking enterprises to build resilient
+            technology ecosystems.
           </p>
 
           <div className="office-image">
-            {/* Place image inside public folder */}
-            <img
-              src="/office.jpg"
-              alt="Office"
-            />
+            <img src="/office.jpg" alt="Office" />
           </div>
 
           <div className="hero-info">
-
             <div className="info-box">
               <MapPin size={20} />
-
               <div>
-                <span>Global HQ</span>
-                <h4>Silicon Valley, CA</h4>
+                <span>India</span>
+                <h4>Nagercoil, Tamil Nadu</h4>
               </div>
             </div>
 
             <div className="info-box">
               <Clock size={20} />
-
               <div>
                 <span>Response Time</span>
-                <h4>&lt; 12 Hours</h4>
+                <h4>&lt; 24 Hours</h4>
               </div>
             </div>
-
           </div>
-
         </div>
 
-        {/* ================= FORM ================= */}
+        {/* Contact Form */}
 
         <div className="contact-right">
-
           <form onSubmit={onSubmit}>
-
             <div className="two-column">
-
               <div className="input-group">
                 <label>Full Name</label>
 
                 <input
                   type="text"
-                  name="fullName"
+                  name="name"
                   placeholder="Jane Cooper"
-                  value={formData.fullName}
-                  onChange={handleChange}
                   required
                 />
               </div>
@@ -119,161 +105,104 @@ export default function ContactForm() {
                   type="email"
                   name="email"
                   placeholder="jane@company.com"
-                  value={formData.email}
-                  onChange={handleChange}
                   required
                 />
               </div>
-
             </div>
 
             <div className="input-group">
-
               <label>Project Type</label>
 
-              <select
-                name="projectType"
-                value={formData.projectType}
-                onChange={handleChange}
-              >
+              <select name="projectType" required>
+                <option value="">Select Service</option>
                 <option>Web Development</option>
                 <option>Software Development</option>
                 <option>UI / UX Design</option>
                 <option>E-Commerce</option>
                 <option>Accessibility</option>
               </select>
-
             </div>
 
             <div className="input-group">
-
               <label>Your Message</label>
 
               <textarea
                 rows="6"
                 name="message"
                 placeholder="Briefly describe your project..."
-                value={formData.message}
-                onChange={handleChange}
                 required
               />
-
             </div>
 
-            <div className="checkbox">
-
-              <input
-                type="checkbox"
-                name="requestNDA"
-                checked={formData.requestNDA}
-                onChange={handleChange}
-              />
-
-              <span>
-                Request standard NDA before discussion
-              </span>
-
-            </div>
-
-            <button className="submit-btn" type="submit">
-
+            <button type="submit" className="submit-btn">
               Send Proposal
-
               <ArrowRight size={18} />
-
             </button>
+
+            <p>{result}</p>
 
             <p className="privacy">
               By submitting this form, you agree to our
               <a href="#"> Privacy Policy</a>
             </p>
-
           </form>
-
         </div>
-
       </section>
 
-      {/* ================= CONTACT CARDS ================= */}
+      {/* Contact Cards */}
 
       <section className="contact-cards">
-
         <div className="contact-card">
-
           <div className="card-icon">
             <Mail size={26} />
           </div>
 
           <h3>Say Hello</h3>
 
-          <p>
-            For general inquiries, partnerships,
-            and project discussions.
-          </p>
+          <p>For general inquiries, partnerships, and project discussions.</p>
 
-          <h4>hello@zanqix.com</h4>
-
-          <span>+91 98765 43210</span>
-
+          <h4>zanqiztech@gmail.com</h4>
         </div>
 
         <div className="contact-card">
-
           <div className="card-icon">
             <Building2 size={26} />
           </div>
 
           <h3>Our Office</h3>
 
-          <p>
-            Visit our office for a consultation
-            and coffee.
-          </p>
+          <p>Visit our office for a consultation and coffee.</p>
 
           <h4>
-            101 Innovation Blvd,
+            Nagercoil,
             <br />
-            Suite 400
+            Tamil Nadu
           </h4>
 
-          <span>
-            Palo Alto, CA 94304
-          </span>
+          <span>India</span>
 
           <a href="#">
             VIEW ON MAPS
             <ExternalLink size={15} />
           </a>
-
         </div>
 
         <div className="contact-card">
-
           <div className="card-icon">
             <Code2 size={26} />
           </div>
 
           <h3>Support</h3>
 
-          <p>
-            Technical support and developer
-            resources.
-          </p>
+          <p>Technical support and developer resources.</p>
 
           <div className="tags">
-
             <span>Discord</span>
-
             <span>Documentation</span>
-
             <span>GitHub</span>
-
           </div>
-
         </div>
-
       </section>
-
     </main>
   );
 }

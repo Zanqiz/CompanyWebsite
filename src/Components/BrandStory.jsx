@@ -19,9 +19,9 @@ export default function BrandStory() {
         <div className="zq-story-heading">
           <span className="zq-eyebrow">Our brand story</span>
           <h2>
-            Bridging Intelligence
+            Building Solutions
             <br />
-            &amp; Precision
+            That Matter
           </h2>
           <span className="zq-underline" />
         </div>
@@ -29,19 +29,22 @@ export default function BrandStory() {
         <div className="zq-mission-card">
           <span className="zq-mission-label">The Mission</span>
           <p>
-            &ldquo;To empower organizations by bridging human intuition with
-            technical precision, transforming complex operational challenges
-            into seamless, automated realities.&rdquo;
+            &ldquo;To empower businesses, educators, publishers, and
+            organizations with reliable technology, accessible digital
+            solutions, and efficient business services that drive sustainable
+            growth and lasting value.&rdquo;
           </p>
         </div>
       </div>
 
       <p className="zq-story-body">
-        At Zanqix Technologies, we don&rsquo;t just build software; we
-        engineer peace of mind. Our approach is rooted in the belief that
-        technology should serve humanity, not the other way around. By
-        integrating AI-powered automation with human-centric design, we
-        create solutions that are as intuitive as they are powerful.
+        At Zanqiz Technologies, we partner with businesses to solve real-world
+        challenges through technology, accessibility, and operational
+        excellence. From custom software and websites to accessible digital
+        publishing, e-learning support, and business process services, we
+        deliver practical solutions that help organizations grow with
+        confidence. Our focus is not just on delivering projects—but on building
+        long-term partnerships through quality, innovation, and trust.
       </p>
 
       <hr className="zq-hr" />
