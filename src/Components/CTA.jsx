@@ -11,10 +11,10 @@ export default function CTA() {
         commit to anything.
       </p>
       <div className="zq-cta-actions">
-        <Link to="/contact" className="zq-btn zq-btn-orange">
+        <Link to="/contact" className="zq-btn zq-btn-orange" onClick={() => window.scrollTo(0, 0)}>
           Start a project <ArrowRight size={18} />
         </Link>
-        <Link to="/contact" className="zq-btn zq-btn-outline-light">
+        <Link to="/contact" className="zq-btn zq-btn-outline-light" onClick={() => window.scrollTo(0, 0)}>
           Book a free call
         </Link>
       </div>

@@ -5,7 +5,7 @@ export default function About() {
     <section className="about-page">
       <div className="about-hero">
         <div className="about-hero-inner">
-          <h1>ABOUT ZANQIX</h1>
+          <h1>ABOUT ZANQIZ</h1>
           <p>
             We're a team of engineers, designers, and QA specialists who build
             software you can trust — on time, on budget, and without surprises.
@@ -22,7 +22,7 @@ export default function About() {
             <span className="about-eyebrow">Our Story</span>
             <h2>A team built around one job: making software you can trust.</h2>
             <p>
-              Zanqix Technologies started with a simple frustration — most
+              Zanqiz Technologies started with a simple frustration — most
               software projects ship late, over budget, and full of surprises.
               We build differently. Every engagement follows the same seven-step
               process, every deliverable is tested before it reaches you, and

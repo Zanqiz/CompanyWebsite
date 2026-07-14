@@ -12,11 +12,31 @@ import {
 import { services } from "../Data/servicesData";
 
 const SOCIAL_LINKS = [
-  { Icon: FaInstagram, href: "https://instagram.com/yourhandle", label: "Instagram" },
-  { Icon: FaXTwitter, href: "https://twitter.com/yourhandle", label: "Twitter / X" },
-  { Icon: FaFacebookF, href: "https://facebook.com/yourhandle", label: "Facebook" },
-  { Icon: FaLinkedinIn, href: "https://linkedin.com/company/yourhandle", label: "LinkedIn" },
-  { Icon: FaRedditAlien, href: "https://reddit.com/r/yourhandle", label: "Reddit" },
+  {
+    Icon: FaInstagram,
+    href: "https://instagram.com/yourhandle",
+    label: "Instagram",
+  },
+  {
+    Icon: FaXTwitter,
+    href: "https://twitter.com/yourhandle",
+    label: "Twitter / X",
+  },
+  {
+    Icon: FaFacebookF,
+    href: "https://facebook.com/yourhandle",
+    label: "Facebook",
+  },
+  {
+    Icon: FaLinkedinIn,
+    href: "https://www.linkedin.com/company/zanqiz-technologies",
+    label: "LinkedIn",
+  },
+  {
+    Icon: FaRedditAlien,
+    href: "https://reddit.com/r/yourhandle",
+    label: "Reddit",
+  },
   { Icon: FaWhatsapp, href: "https://wa.me/yournumber", label: "WhatsApp" },
 ];
 
@@ -52,13 +72,21 @@ export default function Footer() {
         <div className="zq-footer-grid">
           <div className="zq-footer-brand">
             <Logo />
-            <p>Engineering the future of enterprise intelligence with precision and clarity.</p>
+            <p>
+              Building reliable software, accessible digital content, and
+              business solutions that help organizations innovate, grow, and
+              succeed.
+            </p>
           </div>
 
           <div className="zq-footer-col">
             <h5>IT Solutions</h5>
             {itServices.map((service) => (
-              <Link key={service.slug} to={`/services/${service.slug}`}>
+              <Link
+                key={service.slug}
+                to={`/services/${service.slug}`}
+                onClick={() => window.scrollTo(0, 0)}
+              >
                 {service.title}
               </Link>
             ))}
@@ -67,7 +95,11 @@ export default function Footer() {
           <div className="zq-footer-col">
             <h5>Publishing & Accessibility</h5>
             {publishingServices.map((service) => (
-              <Link key={service.slug} to={`/services/${service.slug}`}>
+              <Link
+                key={service.slug}
+                to={`/services/${service.slug}`}
+                onClick={() => window.scrollTo(0, 0)}
+              >
                 {service.title}
               </Link>
             ))}
@@ -76,7 +108,11 @@ export default function Footer() {
           <div className="zq-footer-col">
             <h5>Business Process</h5>
             {businessServices.map((service) => (
-              <Link key={service.slug} to={`/services/${service.slug}`}>
+              <Link
+                key={service.slug}
+                to={`/services/${service.slug}`}
+                onClick={() => window.scrollTo(0, 0)}
+              >
                 {service.title}
               </Link>
             ))}

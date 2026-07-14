@@ -1,4 +1,11 @@
-import { Eye, UserCog, Users } from "lucide-react";
+import {
+  Eye,
+  UserCog,
+  Users,
+  Lightbulb,
+  Accessibility,
+  BadgeCheck,
+} from "lucide-react";
 
 function ValueCard({ Icon, title, body }) {
   return (
@@ -21,7 +28,7 @@ export default function BrandStory() {
           <h2>
             Building Solutions
             <br />
-            That Matter
+            That Matter Create Lasting Value
           </h2>
           <span className="zq-underline" />
         </div>
@@ -38,32 +45,29 @@ export default function BrandStory() {
       </div>
 
       <p className="zq-story-body">
-        At Zanqiz Technologies, we partner with businesses to solve real-world
-        challenges through technology, accessibility, and operational
-        excellence. From custom software and websites to accessible digital
-        publishing, e-learning support, and business process services, we
-        deliver practical solutions that help organizations grow with
-        confidence. Our focus is not just on delivering projects—but on building
-        long-term partnerships through quality, innovation, and trust.
+        Technology should simplify business—not complicate it. At Zanqiz
+        Technologies, we combine technical expertise with industry knowledge to
+        deliver software solutions, accessibility services, digital publishing,
+        and business process support that solve real-world challenges.
       </p>
 
       <hr className="zq-hr" />
 
       <div className="zq-values-grid">
         <ValueCard
-          Icon={Eye}
-          title="Radical Transparency"
-          body="We believe in open communication and verifiable results. Every line of code and every process is documented and accessible to our partners."
+          Icon={Lightbulb}
+          title="Innovation"
+          body="Modern technology that solves business problems."
         />
         <ValueCard
-          Icon={UserCog}
-          title="Engineering Excellence"
-          body="Precision is our standard. We apply rigorous testing and enterprise-grade architecture to every project, regardless of scale."
+          Icon={Accessibility}
+          title="Accessibility"
+          body="Digital content designed for everyone."
         />
         <ValueCard
-          Icon={Users}
-          title="Human-Centric Automation"
-          body="Automation shouldn't replace the human touch—it should amplify it. We design systems that free your team to focus on what they do best."
+          Icon={BadgeCheck}
+          title="Quality"
+          body="Reliable solutions with attention to detail."
         />
       </div>
     </section>

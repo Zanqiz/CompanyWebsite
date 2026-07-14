@@ -15,15 +15,14 @@ export default function Hero() {
             To.
           </h1>
           <p className="zq-hero-sub">
-            We build software and accessible content the same way carefully
-            and with proof you can check.
+          We help businesses, publishers, educational institutions, and enterprises build custom software, create accessible digital content, and streamline operations with innovative technology solutions designed for long-term growth.
           </p>
           <div className="zq-hero-actions">
             <Link to="/contact" className="zq-btn zq-btn-purple">
               Start a project
             </Link>
             <Link to="/#process" className="zq-btn zq-btn-ghost">
-              View Process <ArrowRight size={18} />
+            Explore Services <ArrowRight size={18} />
             </Link>
           </div>
         </div>

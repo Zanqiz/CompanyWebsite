@@ -49,14 +49,15 @@ export default function ContactForm() {
           <span className="contact-tag">CONNECT WITH US</span>
 
           <h1>
-            Hi. Tell us about
+            Let's Build Something
             <br />
-            your project
+            Great Together
           </h1>
 
           <p>
-            We partner with forward-thinking enterprises to build resilient
-            technology ecosystems.
+            Whether you need custom software, accessible digital content,
+            digital publishing, or business process support, our team is ready
+            to help.
           </p>
 
           <div className="office-image">
@@ -176,7 +177,6 @@ export default function ContactForm() {
           <h4>
             Nagercoil, Tamil Nadu
             <br />
-           
           </h4>
 
           <span>India</span>
