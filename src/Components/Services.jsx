@@ -1,76 +1,242 @@
 import React from "react";
-import { Link } from "react-router-dom";
-import { ArrowRight } from "lucide-react";
-import { services } from "../data/servicesData";
 
-// One or two representative services per category for the homepage preview
-const FEATURED_SLUGS = [
-  "web-application-development",
-  "ui-ux-design",
-  "ecommerce-solutions",
-  "website-design-development",
-  "pdf-accessibility-remediation",
-  "wcag-pdfua-section508-compliance",
-  "data-entry-processing",
-  "document-conversion",
+import { Link } from "react-router-dom";
+
+import {
+
+  Code2,
+
+  Globe,
+
+  PenTool,
+
+  ShoppingCart,
+
+  FileText,
+
+  BookOpen,
+
+  Braces,
+
+  Keyboard,
+
+  ArrowRight,
+
+} from "lucide-react";
+
+
+
+const FEATURED_SERVICES = [
+
+  {
+
+    key: "custom-software",
+
+    Icon: Code2,
+
+    title: "Custom Software Development",
+
+    body: "Purpose-built software designed around your business workflows.",
+
+  },
+
+  {
+
+    key: "web-app",
+
+    Icon: Globe,
+
+    title: "Web Application Development",
+
+    body: "Fast, scalable web applications built with modern technologies.",
+
+  },
+
+  {
+
+    key: "ui-ux",
+
+    Icon: PenTool,
+
+    title: "UI / UX Design",
+
+    body: "Beautiful interfaces that deliver intuitive user experiences.",
+
+  },
+
+  {
+
+    key: "ecommerce",
+
+    Icon: ShoppingCart,
+
+    title: "E-Commerce Solutions",
+
+    body: "Online stores optimized for performance, sales, and growth.",
+
+  },
+
+  {
+
+    key: "pdf-remediation",
+
+    Icon: FileText,
+
+    title: "PDF Accessibility",
+
+    body: "Accessible PDF documents compliant with WCAG and PDF/UA standards.",
+
+  },
+
+  {
+
+    key: "epub",
+
+    Icon: BookOpen,
+
+    title: "EPUB Production",
+
+    body: "Professional EPUB 2 & EPUB 3 conversion for digital publishing.",
+
+  },
+
+  {
+
+    key: "xml",
+
+    Icon: Braces,
+
+    title: "XML Conversion",
+
+    body: "Accurate XML tagging and structured content conversion services.",
+
+  },
+
+  {
+
+    key: "data-entry",
+
+    Icon: Keyboard,
+
+    title: "Data Processing",
+
+    body: "Reliable data entry and processing with quality assurance.",
+
+  },
+
 ];
 
-const FEATURED_SERVICES = FEATURED_SLUGS.map((slug) =>
-  services.find((s) => s.slug === slug)
-).filter(Boolean);
+
 
 function ServiceCard({ service }) {
-  const Icon = service.icon;
+
+  const Icon = service.Icon;
+
+
 
   return (
+
     <article className="zq-service-card">
+
       <div className="zq-service-icon">
+
         <Icon size={28} />
+
       </div>
+
+
 
       <h3>{service.title}</h3>
 
-      <p>{service.description}</p>
 
-      <Link to={`/services/${service.slug}`} className="zq-service-link">
+
+      <p>{service.body}</p>
+
+
+
+      <Link to="/services" className="zq-service-link">
+
         Learn More
+
         <ArrowRight size={16} />
+
       </Link>
+
     </article>
+
   );
+
 }
 
-export default function Service() {
+
+
+export default function Services() {
+
   return (
+
     <section className="zq-services" id="services">
+
       <div className="zq-services-inner">
+
         <span className="zq-eyebrow">OUR SERVICES</span>
 
+
+
         <h2>
+
           Solutions Built Around
+
           <br />
+
           Your Business
+
         </h2>
 
+
+
         <p className="zq-services-sub">
+
           We provide modern technology, publishing, and business process
+
           solutions that help organizations improve efficiency, streamline
+
           operations, and accelerate growth.
+
         </p>
 
+
+
         <div className="zq-services-grid">
+
           {FEATURED_SERVICES.map((service) => (
-            <ServiceCard key={service.slug} service={service} />
+
+            <ServiceCard key={service.key} service={service} />
+
           ))}
+
         </div>
 
+
+
         <div className="zq-services-footer">
+
           <Link to="/services" className="zq-view-all">
+
             View All Services
+
             <ArrowRight size={18} />
+
           </Link>
+
         </div>
+
       </div>
+
     </section>
+
   );
+
 }
+
+
+

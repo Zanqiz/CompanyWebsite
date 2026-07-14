@@ -136,7 +136,7 @@ export const services = [
   {
     slug: "epub-production",
     icon: BookOpen,
-    title: "EPUB 2 & EPUB 3 Production",
+    title: "Electronic Publication",
     description: "Publisher-ready digital books validated across devices before final delivery.",
     category: "publishing-accessibility",
     images: ["/images/services/epub-1.jpg", "/images/services/epub-2.jpg"],
@@ -199,28 +199,7 @@ export const services = [
       { step: "Deliver", detail: "You receive the remediated file plus an issues summary." },
     ],
   },
-  {
-    slug: "mathtype-mathml",
-    icon: Sigma,
-    title: "Math Type & MathML",
-    description: "Accurate mathematical content converted for accessible, structured delivery.",
-    category: "publishing-accessibility",
-    images: ["/images/services/mathml-1.jpg", "/images/services/mathml-2.jpg"],
-    stack: ["MathML", "MathType", "LaTeX"],
-    overview: "Equations rendered as images are invisible to screen readers. We convert mathematical content into structured MathML that assistive technology can actually read aloud.",
-    points: [
-      "Equations converted from images or MathType into MathML",
-      "Compatible with major screen readers' math support",
-      "Accuracy-checked against the original source",
-      "Delivered in the format your publishing pipeline expects",
-    ],
-    process: [
-      { step: "Extract", detail: "Mathematical content is identified across the source material." },
-      { step: "Convert", detail: "Equations are rebuilt as structured MathML." },
-      { step: "Verify", detail: "Converted equations are checked against the originals for accuracy." },
-      { step: "Deliver", detail: "Files are handed over in your required format." },
-    ],
-  },
+ 
   {
     slug: "ocr-document-digitization",
     icon: ScanLine,

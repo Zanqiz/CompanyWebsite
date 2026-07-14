@@ -94,7 +94,7 @@ export default function Footer() {
         <div className="zq-footer-social">{socialItems}</div>
 
         <div className="zq-footer-legal">
-          <span>© 2024 Zanqix Technologies. All rights reserved.</span>
+          <span>© 2026 Zanqiz Technologies. All rights reserved.</span>
         </div>
       </div>
     </footer>

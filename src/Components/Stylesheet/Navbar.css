@@ -17,7 +17,7 @@
   background: #fff; opacity: 0.9;
 }
 .zq-logo-img {
-  height: 64px;
+  height: 48px;
   width: auto;
   display: block;
 }
@@ -36,7 +36,7 @@
 .zq-nav-inner {
   max-width: 1180px; margin: 0 auto;
   display: flex; align-items: center; justify-content: space-between;
-  padding: 16px 24px;
+  padding: 10px 24px;
 }
 .zq-nav-links { display: flex; gap: 34px; }
 .zq-nav-links a {
