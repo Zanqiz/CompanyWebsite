@@ -302,7 +302,7 @@ h1, h2, h3, h4, h5 {
 }
 
 .zq-marquee-track-reverse {
-  animation: zq-scroll-reverse 34s linear infinite; /* slower than row 1's 22s */
+  animation: zq-scroll-reverse 22s linear infinite; /* now matches row 1's speed */
 }
 
 @keyframes zq-scroll-reverse {

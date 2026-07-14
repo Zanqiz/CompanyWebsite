@@ -197,9 +197,9 @@ export default function ContactForm() {
           <p>Technical support and developer resources.</p>
 
           <div className="tags">
-            <span>Discord</span>
+            <span>WhatsApp</span>
             <span>Documentation</span>
-            <span>GitHub</span>
+            <span>LinkedIn</span>
           </div>
         </div>
       </section>
