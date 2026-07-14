@@ -1,17 +1,17 @@
 import { Routes, Route } from "react-router-dom";
 
-import Layout from "../components/Layout";
-import Hero from "../components/Hero";
-import BrandStory from "../components/BrandStory";
-import ProcessSteps from "../components/ProcessSteps";
-import Services from "../components/Services";
-import AboutCompany from "../components/AboutCompany";
-import Industries from "../components/Industries";
-import Contact from "../components/Contact";
-import ServiceMain from "../components/Service-main";
-import ServiceDetail from "../components/ServiceDetail";
-import CTA from "../components/CTA";
-import About from "../components/About";
+import Layout from "../Components/Layout";
+import Hero from "../Components/Hero";
+import BrandStory from "../Components/BrandStory";
+import ProcessSteps from "../Components/ProcessSteps";
+import Services from "../Components/Services";
+import AboutCompany from "../Components/AboutCompany";
+import Industries from "../Components/Industries";
+import Contact from "../Components/Contact";
+import ServiceMain from "../Components/Service-main";
+import ServiceDetail from "../Components/ServiceDetail";
+import CTA from "../Components/CTA";
+import About from "../Components/About";
 
 function Home() {
   return (

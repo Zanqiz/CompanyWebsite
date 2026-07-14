@@ -9,7 +9,7 @@ import {
   FaRedditAlien,
   FaWhatsapp,
 } from "react-icons/fa6";
-import { services } from "../data/servicesData";
+import { services } from "../Data/servicesData";
 
 const SOCIAL_LINKS = [
   { Icon: FaInstagram, href: "https://instagram.com/yourhandle", label: "Instagram" },
