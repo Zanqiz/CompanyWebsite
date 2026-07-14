@@ -136,7 +136,7 @@ export const services = [
   {
     slug: "epub-production",
     icon: BookOpen,
-    title: "Electronic Publication",
+    title: "E-Publication",
     description: "Publisher-ready digital books validated across devices before final delivery.",
     category: "publishing-accessibility",
     images: ["/images/services/epub-1.jpg", "/images/services/epub-2.jpg"],

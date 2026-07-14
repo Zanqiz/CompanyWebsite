@@ -1,42 +1,5 @@
-import { Routes, Route } from "react-router-dom";
-
-import Layout from "./components/Layout";
-import Hero from "./components/Hero";
-import BrandStory from "./components/BrandStory";
-import ProcessSteps from "./components/ProcessSteps";
-import Services from "./components/Services";
-import AboutCompany from "./components/AboutCompany";
-import Industries from "./components/Industries";
-import Contact from "./components/Contact";
-import ServiceMain from "./components/Service-main";
-import ServiceDetail from "./components/ServiceDetail";
-import CTA from "./components/CTA";
-import About from "./components/About";
-
-function Home() {
-  return (
-    <>
-      <Hero />
-      <BrandStory />
-      <Services />
-      <ProcessSteps />
-      <AboutCompany />
-      <Industries />
-      <CTA />
-    </>
-  );
-}
+import AppRoutes from "./routes/AppRoutes";
 
 export default function App() {
-  return (
-    <Routes>
-      <Route element={<Layout />}>
-        <Route path="/" element={<Home />} />
-        <Route path="/contact" element={<Contact />} />
-        <Route path="/services" element={<ServiceMain />} />
-        <Route path="/services/:slug" element={<ServiceDetail />} />
-        <Route path="/about" element={<About />} />
-      </Route>
-    </Routes>
-  );
+  return <AppRoutes />;
 }
