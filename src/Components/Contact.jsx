@@ -65,7 +65,7 @@ export default function ContactForm() {
 
           <div className="hero-info">
             <div className="info-box">
-              <MapPin size={20} />
+              {/* <MapPin size={20} /> */}
               <div>
                 <span>India</span>
                 <h4>Nagercoil, Tamil Nadu</h4>
@@ -174,17 +174,17 @@ export default function ContactForm() {
           <p>Visit our office for a consultation and coffee.</p>
 
           <h4>
-            Nagercoil,
+            Nagercoil, Tamil Nadu
             <br />
-            Tamil Nadu
+           
           </h4>
 
           <span>India</span>
 
-          <a href="#">
+          {/* <a href="#">
             VIEW ON MAPS
             <ExternalLink size={15} />
-          </a>
+          </a> */}
         </div>
 
         <div className="contact-card">

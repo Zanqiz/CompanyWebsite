@@ -72,7 +72,7 @@ h1, h2, h3, h4, h5 {
 
 @media (max-width: 900px) {
   .zq-hero-inner { grid-template-columns: 1fr; text-align: left; }
-  .zq-hero-art { order: -1; max-width: 260px; margin: 0 auto; }
+  .zq-hero-art { max-width: 260px; margin: 0 auto; }
 }
 
 /* ---------- Brand story ---------- */
@@ -292,4 +292,24 @@ h1, h2, h3, h4, h5 {
 }
 @media (prefers-reduced-motion: reduce) {
   .zq-marquee-track { animation: none; }
+}
+@media (max-width: 900px) {
+  .zq-about-inner { grid-template-columns: 1fr; }
+  .zq-about-media img { height: 280px; margin-left: 0; margin-inline: auto; }
+}
+.zq-marquee-row2 {
+  margin-top: 16px;
+}
+
+.zq-marquee-track-reverse {
+  animation: zq-scroll-reverse 34s linear infinite; /* slower than row 1's 22s */
+}
+
+@keyframes zq-scroll-reverse {
+  from { transform: translateX(-50%); }
+  to { transform: translateX(0); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .zq-marquee-track-reverse { animation: none; }
 }
