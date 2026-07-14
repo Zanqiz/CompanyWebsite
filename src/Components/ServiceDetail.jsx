@@ -1,6 +1,6 @@
 import { useParams, Link, Navigate } from "react-router-dom";
 import { ArrowLeft, ArrowRight, Check } from "lucide-react";
-import { services } from "../data/servicesData";
+import { services } from "../Data/servicesData";
 import "./Stylesheet/Service-detail.css";
 
 export default function ServiceDetail() {

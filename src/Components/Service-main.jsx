@@ -4,7 +4,7 @@ import "./Stylesheet/Service-main.css";
 import "../styles.css";
 import CTA from "./CTA";
 import { ArrowRight } from "lucide-react";
-import { services, filters } from "../data/servicesData";
+import { services, filters } from "../Data/servicesData";
 
 export default function ServicesSection() {
   const [activeFilter, setActiveFilter] = useState("all");
