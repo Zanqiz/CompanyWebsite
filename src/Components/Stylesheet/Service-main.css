@@ -134,13 +134,13 @@
   z-index: 1;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 1px;
+  gap: 20px;
   max-width: 1200px;
   margin: 0 auto 96px;
-  background: #ffffff;
-  border: 1px solid var(--sm-border);
+  background: transparent;
+  border: none;
   border-radius: 16px;
-  overflow: hidden;
+  overflow: visible;
 }
 
 .services-section .card {
@@ -149,13 +149,16 @@
   padding: 36px 32px;
   display: flex;
   flex-direction: column;
-  transition: background 0.25s ease, box-shadow 0.25s ease;
+  border: 1px solid var(--sm-border);
+  border-radius: 14px;
+  transition: background 0.25s ease, box-shadow 0.25s ease, transform 0.2s ease;
   box-shadow: 0 8px 24px rgba(27, 31, 59, 0.12);
 }
 
 .services-section .card:hover {
   background: #fdfbf9;
   box-shadow: 0 12px 32px rgba(27, 31, 59, 0.18);
+  transform: translateY(-2px);
 }
 
 .services-section .icon-box {
