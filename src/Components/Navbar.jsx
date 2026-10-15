@@ -27,12 +27,13 @@ export default function Navbar() {
 
   const isActive = (path) => {
     if (path === "/") return pathname === "/" && hash !== "#industries";
-    if (path === "/#industries") return pathname === "/" && hash === "#industries";
+    if (path === "/#industries")
+      return pathname === "/" && hash === "#industries";
     return pathname.startsWith(path);
   };
 
   return (
-    <header className="fixed inset-x-0 top-0 z-50 px-5 pt-4 sm:px-8">
+    <header className="fixed inset-x-0 top-0 z-50 px-5 pt-3 sm:px-8">
       <div
         className={`mx-auto max-w-7xl border backdrop-blur-xl transition-all duration-300 ${
           scrolled
@@ -40,7 +41,7 @@ export default function Navbar() {
             : "border-white/30 bg-white/95 shadow-lg shadow-ink/5"
         } ${open ? "rounded-3xl" : "rounded-full"}`}
       >
-        <div className="flex items-center justify-between gap-4 py-1.5 pl-5 pr-2">
+        <div className="flex items-center justify-between gap-4 py-0.5 pl-5 pr-2">
           <Link to="/" aria-label="Zanqiz home">
             <Logo large />
           </Link>
@@ -50,7 +51,7 @@ export default function Navbar() {
               <Link
                 key={l.label}
                 to={l.path}
-                className={`rounded-full px-4 py-2 text-sm font-medium transition ${
+                className={`rounded-full px-4 py-1.5 text-sm font-medium transition ${
                   isActive(l.path)
                     ? "bg-brand/10 text-brand"
                     : "text-ink/70 hover:bg-ink/5 hover:text-ink"
@@ -64,7 +65,7 @@ export default function Navbar() {
           <div className="flex items-center gap-2">
             <Link
               to="/contact"
-              className="hidden items-center gap-1.5 rounded-full bg-ink px-5 py-3 text-sm font-semibold text-white transition hover:bg-brand sm:inline-flex"
+              className="hidden items-center gap-1.5 rounded-full bg-ink px-5 py-2 text-sm font-semibold text-white transition hover:bg-brand sm:inline-flex"
             >
               Start a project <ArrowUpRight size={16} />
             </Link>
