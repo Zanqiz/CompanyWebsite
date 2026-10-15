@@ -73,9 +73,10 @@ export default function Contact() {
             </p>
 
             <div className="relative mt-8 overflow-hidden rounded-3xl border border-white/15 shadow-xl">
+           
               <iframe
                 title="Zanqiz location: karungal, Tamil Nadu"
-                src="https://www.google.com/maps?q=karungal,Tamil+Nadu,India&z=12&output=embed"
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3948.751657269446!2d77.20861502477095!3d8.227710341805052!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3b04fe314fa8aa45%3A0x25bee54084c14f6e!2sThozhicode%2C%20Tamil%20Nadu%20629157!5e0!3m2!1sen!2sin!4v1792048670615!5m2!1sen!2sin"
                 loading="lazy"
                 referrerPolicy="no-referrer-when-downgrade"
                 className="h-44 w-full border-0 grayscale-[0.4] transition duration-500 hover:grayscale-0 sm:h-48"
