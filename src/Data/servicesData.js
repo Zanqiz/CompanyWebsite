@@ -17,6 +17,7 @@ import {
   Briefcase,
   ListChecks,
   AlignLeft,
+  Boxes,
 } from "lucide-react";
 
 export const services = [
@@ -41,6 +42,37 @@ export const services = [
       { step: "Design", detail: "Wireframes and a component system tailored to your data." },
       { step: "Build", detail: "Iterative development with staging environments for feedback." },
       { step: "Launch", detail: "Phased rollout with monitoring in place from day one." },
+    ],
+  },
+  {
+    slug: "erp-solutions",
+    icon: Boxes,
+    title: "ERP Product",
+    description: "One connected platform for finance, inventory, sales, HR and reporting.",
+    category: "it-solutions",
+    images: ["/images/services/erp-1.jpg", "/images/services/erp-2.jpg"],
+    stack: ["React", "Node.js", "MySQL", "REST APIs", "Role-Based Access"],
+    overview: "One system for your whole operation. Our ERP product brings finance, inventory, purchasing, sales, HR and reporting together, so your teams stop juggling spreadsheets and work from a single source of truth.",
+    modules: [
+      { title: "Finance & Accounting", body: "Invoicing, expenses, ledgers and clear financial reports." },
+      { title: "Inventory & Warehouse", body: "Track stock levels, locations and movements as they happen." },
+      { title: "Procurement", body: "Purchase requests, approvals, vendors and purchase orders." },
+      { title: "Sales & CRM", body: "Leads, quotes, orders and customer history in one place." },
+      { title: "HR & Payroll", body: "Employee records, attendance, leave and payroll processing." },
+      { title: "Reports & Analytics", body: "Live dashboards and exportable reports for every team." },
+    ],
+    points: [
+      "Modular: start with what you need and add modules as you grow",
+      "Role-based access so each team only sees what it should",
+      "Real-time dashboards and exportable reports",
+      "Data migration from your spreadsheets and existing systems",
+      "Training and a documented handover so your team is confident from day one",
+    ],
+    process: [
+      { step: "Discovery", detail: "We map your workflows, departments and reporting needs before configuring anything." },
+      { step: "Configure", detail: "Modules, roles and approval flows are set up around how your business actually runs." },
+      { step: "Migrate & Test", detail: "Existing data is cleaned, imported and validated with your team before go-live." },
+      { step: "Go-live & Support", detail: "Phased rollout with training, monitoring and ongoing support." },
     ],
   },
   {
